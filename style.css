@@ -1,0 +1,440 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+    color: #333;
+    margin: 0;
+    padding: 80px 0 0 0;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #e91e63;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e91e63;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background: #e91e63;
+    color: white;
+    border-color: #e91e63;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #e91e63;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-style: italic;
+}
+
+.message {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hearts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.heart {
+    font-size: 2em;
+    animation: bounce 1s infinite alternate;
+}
+
+.heart:nth-child(1) { animation-delay: 0s; }
+.heart:nth-child(2) { animation-delay: 0.2s; }
+.heart:nth-child(3) { animation-delay: 0.4s; }
+.heart:nth-child(4) { animation-delay: 0.6s; }
+.heart:nth-child(5) { animation-delay: 0.8s; }
+.our-story {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+    text-align: center;
+}
+
+.our-story h2 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.our-story p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.our-story h3 {
+    color: #e91e63;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.our-story ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.our-story li {
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.memories {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+    text-align: center;
+}
+
+.memories h2 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.memories ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.memories li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border-left: 5px solid #e91e63;
+}
+
+.positive-games {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+    text-align: center;
+}
+
+.positive-games h2 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.positive-games button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
+}
+
+.positive-games button:hover {
+    background: #c2185b;
+}
+
+.positive-games p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.positive-games input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e91e63;
+    margin: 10px;
+}
+
+#playMusicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: background 0.3s;
+}
+
+#playMusicBtn:hover {
+    background: #c2185b;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #e91e63;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+section {
+    margin: 40px 0;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.love-quotes blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 182, 193, 0.3);
+    border-left: 5px solid #e91e63;
+    border-radius: 5px;
+}
+
+.love-messages p {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 218, 221, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.love-letters .letter {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 240, 245, 0.7);
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+}
+
+.love-letters h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.love-letters p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.love-poems .poem {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 218, 221, 0.5);
+    border-radius: 15px;
+    border: 2px solid #ff69b4;
+}
+
+.love-poems h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.love-poems p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.love-poems cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.love-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .love-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .emoji {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .hearts {
+        gap: 5px;
+    }
+
+    .heart {
+        font-size: 1.5em;
+    }
+
+    .love-gallery {
+        grid-template-columns: 1fr;
+    }
+}
